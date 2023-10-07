@@ -39,8 +39,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   late FirebaseAuth auth;
-  late String email = '123123123ddd@gmail.com';
-  late String password = '123123123';
+  late String email;
+  late String password;
 
   @override
   void initState() {
@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 if (typedEmail.isEmpty) {
                   print('type e mail');
                 } else {
-                  email.replaceAll(typedEmail, typedEmail);
+                  email = typedEmail;
                   print(email.toString());
                 }
               },
@@ -86,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 if (typedPassword.isEmpty) {
                   print('type password');
                 } else {
-                  password.replaceAll(typedPassword, typedPassword);
+                  password = typedPassword;
                   print(password.toString());
                 }
               },
